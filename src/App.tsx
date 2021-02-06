@@ -6,11 +6,12 @@ import Rocket from './components/Rocket';
 import LaunchInfo from './components/LaunchInfo';
 
 const App = () => {
+  const rocketId = '5e9d0d95eda69974db09d1ed';
   return (
     <LayoutContainer>
       <Header />
       <Content>
-        <Rocket />
+        <Rocket id={rocketId} />
         <LaunchInfo />
       </Content>
       <Footer />
