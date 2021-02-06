@@ -12,6 +12,7 @@ const HeaderComponent = () => {
 };
 
 const Header = styled.header`
+  grid-area: header;
   background-color: #000;
   display: flex;
   align-items: center;
