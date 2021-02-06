@@ -19,16 +19,16 @@ const App = () => {
   );
 };
 
-const LayoutContainer = styled.section`
+const LayoutContainer = styled.div`
   display: grid;
-  grid-template-rows: 50px auto 67px;
+  grid-template-rows: 40px auto 67px;
   grid-template-areas:
     'header'
     'content'
     'footer';
   background-color: #000;
   color: #fff;
-  height: 100vh;
+  height: 100%;
 `;
 
 const Content = styled.div`

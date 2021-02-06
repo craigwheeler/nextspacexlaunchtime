@@ -34,7 +34,7 @@ const RocketContainer = styled.div`
   width: 100%;
 
   .rocket {
-    max-height: 600px;
+    max-height: 70vh;
   }
 `;
 

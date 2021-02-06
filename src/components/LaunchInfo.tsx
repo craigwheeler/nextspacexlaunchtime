@@ -30,8 +30,8 @@ const LaunchInfo = () => {
 const LaunchInfoContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
   align-items: flex-start;
+  justify-content: center;
   width: 100%;
 
   .timer {
@@ -43,8 +43,9 @@ const LaunchInfoContainer = styled.div`
     border-top: 1px solid rgba(255, 255, 255, 0.2);
 
     p {
-      line-height: 24px;
-      font-weight: 200;
+      line-height: 22px;
+      font-weight: 300;
+      font-size: 14px;
     }
   }
 `;
