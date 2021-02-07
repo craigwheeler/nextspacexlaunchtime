@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
-const CountdownTimer = () => {
+const CountdownTimer = ({ date }) => {
+  const countDownDate = new Date(date).getTime();
   const [time, setTime] = useState({
     days: 0,
     hours: 0,
@@ -9,12 +10,8 @@ const CountdownTimer = () => {
     seconds: 0
   });
 
-  // target date
-  const targetDate = '2021-02-12T05:25:00.000Z';
-  const countDownDate = new Date(targetDate).getTime();
-
   useEffect(() => {
-    const interval = setInterval(function () {
+    const interval = setInterval(() => {
       const now = new Date().getTime();
       const distance = countDownDate - now;
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -59,24 +56,21 @@ const CountdownTimer = () => {
 
 const TimerContainer = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: left;
-  position: relative;
-  left: -40px;
+  justify-content: space-evenly;
+  height: fit-content;
+  margin-top: 25px;
+  max-width: 500px;
+  width: 100%;
 
   .time {
-    width: 125px;
-    height: 125px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-weight: 200;
-
     .value {
-      font-size: 75px;
+      font-size: 50px;
     }
-
     .unit {
       font-size: 16px;
     }

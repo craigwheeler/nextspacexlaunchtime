@@ -12,7 +12,7 @@ const Footer = () => {
           <LinkSeparator />
           <FooterLink>Donate</FooterLink>
         </FooterMenu>
-        <FooterText>somthing about the site nextspacexlaunchtime.com 2021</FooterText>
+        <FooterText>Somthing awesome about nextspacexlaunchtime.com</FooterText>
       </MenuContainer>
     </FooterContainer>
   );

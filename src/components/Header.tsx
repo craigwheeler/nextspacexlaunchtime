@@ -22,18 +22,18 @@ const Header = styled.header`
 
   .spacex-logo {
     pointer-events: none;
-    height: 25px;
+    height: 20px;
     margin: 25px 0;
     pointer-events: none;
   }
-
   .caption {
     position: relative;
-    left: -20px;
+    left: -10px;
     top: 4px;
-    font-size: 12px;
-    color: #999;
+    font-size: 10px;
+    color: #adadad;
     pointer-events: none;
+    letter-spacing: 0.5px;
   }
 `;
 
