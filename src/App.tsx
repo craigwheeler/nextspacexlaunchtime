@@ -58,7 +58,7 @@ const App = () => {
 
 const LayoutContainer = styled.div`
   display: grid;
-  grid-template-rows: 40px auto 67px;
+  grid-template-rows: 40px auto 75px;
   grid-template-areas:
     'header'
     'content'

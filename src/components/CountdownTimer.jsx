@@ -58,7 +58,6 @@ const TimerContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
   height: fit-content;
-  margin-top: 25px;
   max-width: 500px;
   width: 100%;
 

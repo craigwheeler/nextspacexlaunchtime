@@ -10,9 +10,10 @@ const Footer = () => {
           <LinkSeparator />
           <FooterLink>About</FooterLink>
           <LinkSeparator />
-          <FooterLink>Donate</FooterLink>
+          <FooterLink href="https://ko-fi.com/nextspacexlaunchtime">Donate</FooterLink>
         </FooterMenu>
-        <FooterText>Somthing awesome about nextspacexlaunchtime.com</FooterText>
+        <FooterText>Current information about the next launch from SpaceX</FooterText>
+        <FooterText>nextspacexlaunchtime.com</FooterText>
       </MenuContainer>
     </FooterContainer>
   );
@@ -40,6 +41,7 @@ const FooterLink = styled.a`
   color: #999;
   font-size: 12px;
   cursor: pointer;
+  text-decoration: none;
   &:hover {
     color: #fff;
   }
@@ -54,8 +56,9 @@ const LinkSeparator = styled.span`
   }
 `;
 
-const FooterText = styled.h1`
+const FooterText = styled.p`
   color: #fff;
   font-size: 10px;
   font-weight: 100;
+  text-align: center;
 `;
