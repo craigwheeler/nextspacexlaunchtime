@@ -6,14 +6,13 @@ const Footer = () => {
     <FooterContainer>
       <MenuContainer>
         <FooterMenu>
-          <FooterLink>Home</FooterLink>
+          <FooterLink href="/">Home</FooterLink>
           <LinkSeparator />
-          <FooterLink>About</FooterLink>
+          <FooterLink href="/">About</FooterLink>
           <LinkSeparator />
           <FooterLink href="https://ko-fi.com/nextspacexlaunchtime">Donate</FooterLink>
         </FooterMenu>
-        <FooterText>Current information about the next launch from SpaceX</FooterText>
-        <FooterText>nextspacexlaunchtime.com</FooterText>
+        <FooterText>Information about the next SpaceX launch</FooterText>
       </MenuContainer>
     </FooterContainer>
   );
@@ -58,7 +57,7 @@ const LinkSeparator = styled.span`
 
 const FooterText = styled.p`
   color: #fff;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 100;
   text-align: center;
 `;

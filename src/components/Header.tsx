@@ -30,7 +30,7 @@ const Header = styled.header`
     position: relative;
     left: -10px;
     top: 4px;
-    font-size: 10px;
+    font-size: 12px;
     color: #adadad;
     pointer-events: none;
     letter-spacing: 0.5px;
