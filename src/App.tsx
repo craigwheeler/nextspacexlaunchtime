@@ -9,6 +9,7 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 import { RestLink } from 'apollo-link-rest';
 import gql from 'graphql-tag';
 import LoadingSpinner from './components/LoadingSpinner';
+import LaunchInfo from './components/LaunchInfo';
 
 const restLink = new RestLink({ uri: 'https://api.spacexdata.com/v4/' });
 
@@ -22,6 +23,7 @@ const query = gql`
     launch @rest(type: "Launches", path: "launches/next") {
       rocket
       date_utc
+      name
     }
   }
 `;
@@ -45,7 +47,10 @@ const App = () => {
         {launch.date_utc ? (
           <>
             <CountdownTimer date={launch.date_utc} />
-            <Rocket id={launch.rocket} />
+            <View>
+              <Rocket id={launch.rocket} />
+              <LaunchInfo launch={launch} />
+            </View>
           </>
         ) : (
           <LoadingSpinner />
@@ -74,6 +79,10 @@ const Content = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+`;
+
+const View = styled.div`
+  display: flex;
 `;
 
 export default App;
