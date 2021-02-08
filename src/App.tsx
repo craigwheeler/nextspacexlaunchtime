@@ -49,7 +49,8 @@ const App = () => {
             <CountdownTimer date={launch.date_utc} />
             <View>
               <Rocket id={launch.rocket} />
-              <LaunchInfo launch={launch} />
+              {/* TODO: transition launch details on about click */}
+              {/* <LaunchInfo launch={launch} /> */}
             </View>
           </>
         ) : (
@@ -63,7 +64,7 @@ const App = () => {
 
 const LayoutContainer = styled.div`
   display: grid;
-  grid-template-rows: 40px auto 75px;
+  grid-template-rows: 50px auto 40px;
   grid-template-areas:
     'header'
     'content'
@@ -77,8 +78,9 @@ const Content = styled.div`
   grid-area: content;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
+  background-color: #0a0a0a;
 `;
 
 const View = styled.div`

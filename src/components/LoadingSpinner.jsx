@@ -12,7 +12,8 @@ const LoadingSpinner = () => {
 
 const Container = styled.div`
   height: 100%;
-  background: #000;
+  width: 100%;
+  background: #0a0a0a;
   display: flex;
   align-items: center;
   justify-content: center;

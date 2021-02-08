@@ -6,7 +6,10 @@ const HeaderComponent = () => {
   return (
     <Header>
       <img src={logo} className="spacex-logo" alt="logo" />
-      <span className="caption">/ Next SpaceX Launch Time</span>
+      <div className="container">
+        <span className="separator">/</span>
+        <h1 className="caption">Next SpaceX Launch Time</h1>
+      </div>
     </Header>
   );
 };
@@ -18,7 +21,7 @@ const Header = styled.header`
   align-items: center;
   justify-content: left;
   color: #fff;
-  padding-left: 25px;
+  padding-left: 10px;
 
   .spacex-logo {
     pointer-events: none;
@@ -26,14 +29,20 @@ const Header = styled.header`
     margin: 25px 0;
     pointer-events: none;
   }
-  .caption {
+  .container {
     position: relative;
     left: -10px;
-    top: 4px;
-    font-size: 12px;
-    color: #adadad;
-    pointer-events: none;
-    letter-spacing: 0.5px;
+    .caption,
+    .separator {
+      font-size: 12px;
+      color: #adadad;
+      pointer-events: none;
+      font-weight: 400;
+      display: inline-block;
+    }
+    .separator {
+      margin-right: 5px;
+    }
   }
 `;
 

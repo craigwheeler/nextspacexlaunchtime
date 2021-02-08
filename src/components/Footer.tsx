@@ -10,9 +10,8 @@ const Footer = () => {
           <LinkSeparator />
           <FooterLink href="/">About</FooterLink>
           <LinkSeparator />
-          <FooterLink href="https://ko-fi.com/nextspacexlaunchtime">Donate</FooterLink>
+          <FooterLink href="https://ko-fi.com/nextspacexlaunchtime">Support</FooterLink>
         </FooterMenu>
-        <FooterText>Information about the next SpaceX launch</FooterText>
       </MenuContainer>
     </FooterContainer>
   );
@@ -50,14 +49,8 @@ const LinkSeparator = styled.span`
   color: #fff;
   font-size: 12px;
   font-weight: 100;
+  margin: 0 15px;
   &::before {
     content: '|';
   }
-`;
-
-const FooterText = styled.p`
-  color: #fff;
-  font-size: 12px;
-  font-weight: 100;
-  text-align: center;
 `;

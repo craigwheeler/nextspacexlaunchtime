@@ -4,15 +4,11 @@ import styled from 'styled-components';
 const LaunchInfo = ({ launch }: any) => {
   return (
     <Container>
-      <h1 className="title">Next Launch Time</h1>
+      <h3 className="title">Scheduled Launch</h3>
       <div className="info scheduled-launch">
-        <p>
-          <span className="date">Wednesday, February 3, 2021</span>
-          <span className="time">5:35:00 PM</span>
-        </p>
-        <p>
-          <span className="location">Vandenberg Air Force Base</span>
-        </p>
+        <p className="date">Wednesday, February 3, 2021</p>
+        <p className="time">5:35:00 PM</p>
+        <p className="location">Vandenberg Air Force Base</p>
       </div>
 
       <h3 className="title">{launch.name}</h3>
@@ -39,15 +35,15 @@ const Container = styled.div`
   padding: 0 25px;
   max-width: 200px;
 
+  .scheduled-launch {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
   .title {
     font-size: 14px;
   }
   .info {
     font-weight: 200;
     font-size: 12px;
-  }
-  .scheduled-launch {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   }
 `;
 
