@@ -24,6 +24,7 @@ const query = gql`
       rocket
       date_utc
       name
+      flight_number
     }
   }
 `;
@@ -31,7 +32,9 @@ const query = gql`
 const App = () => {
   const [launch, setLaunch] = useState({
     rocket: '',
-    date_utc: ''
+    date_utc: '',
+    name: '',
+    flight_number: ''
   });
 
   useEffect(() => {
@@ -52,6 +55,10 @@ const App = () => {
               {/* TODO: transition launch details on about click */}
               {/* <LaunchInfo launch={launch} /> */}
             </View>
+            <MissionInfo>
+              <p className="mission-name">{launch.name}</p>
+              <p className="mission-flight">Flight Number {launch.flight_number}</p>
+            </MissionInfo>
           </>
         ) : (
           <LoadingSpinner />
@@ -80,11 +87,25 @@ const Content = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  background-color: #0a0a0a;
+  background-color: #131313;
 `;
 
 const View = styled.div`
   display: flex;
+`;
+
+const MissionInfo = styled.div`
+  text-align: center;
+  color: #999;
+
+  .mission-name {
+    font-size: 20px;
+    margin: 5px;
+  }
+  .mission-flight {
+    font-size: 12px;
+    margin: 0;
+  }
 `;
 
 export default App;

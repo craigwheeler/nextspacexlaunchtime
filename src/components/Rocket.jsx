@@ -7,34 +7,16 @@ import starShip from '../assets/starship.png';
 const Rocket = ({ id }) => {
   switch (id) {
     case '5e9d0d95eda69973a809d1ec':
-      return (
-        <RocketContainer>
-          <img src={falcon9} className="rocket" alt="rocket" />
-        </RocketContainer>
-      );
+      return <RocketImage src={falcon9} className="rocket" alt="rocket" />;
     case '5e9d0d95eda69974db09d1ed':
-      return (
-        <RocketContainer>
-          <img src={falconHeavy} className="rocket" alt="rocket" />
-        </RocketContainer>
-      );
+      return <RocketImage src={falconHeavy} className="rocket" alt="rocket" />;
     default:
-      return (
-        <RocketContainer>
-          <img src={starShip} className="rocket" alt="rocket" />
-        </RocketContainer>
-      );
+      return <RocketImage src={starShip} className="rocket" alt="rocket" />;
   }
 };
 
-const RocketContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  .rocket {
-    max-height: 60vh;
-  }
+const RocketImage = styled.img`
+  max-height: 60vh;
 `;
 
 export default Rocket;
