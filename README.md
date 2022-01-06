@@ -1,4 +1,13 @@
-# Getting Started with Create React App
+<!-- PROJECT LOGO -->
+<div align="center">
+    <h1>Next SpaceX Launch Time</h1>
+    <h3>PWA countdown timer to view the next SpaceX launch</h3>
+    <p>
+        <a href="https://nextspacexlaunchtime.com" target="_blank">View the App</a>
+    </p>
+    <img src="src/assets/next-spacex-launch-time.png" alt="Favicon Generator" >
+</div>
+<br />
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
