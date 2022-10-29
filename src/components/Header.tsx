@@ -6,10 +6,6 @@ const HeaderComponent = () => {
   return (
     <Header>
       <img src={logo} className="spacex-logo" alt="logo" />
-      <div className="container">
-        <span className="separator">/</span>
-        <h1 className="caption">Next SpaceX Launch Time</h1>
-      </div>
     </Header>
   );
 };
@@ -19,7 +15,7 @@ const Header = styled.header`
   background-color: #000;
   display: flex;
   align-items: center;
-  justify-content: left;
+  justify-content: center;
   color: #fff;
   padding-left: 10px;
 

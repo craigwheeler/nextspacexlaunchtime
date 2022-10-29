@@ -37,7 +37,17 @@ const App = () => {
 
   useEffect(() => {
     client.query({ query }).then((response) => {
-      setLaunch(response.data.launch);
+      const { launch } = response.data;
+      if (new Date(launch) < new Date()) {
+        setLaunch(launch);
+      } else {
+        setLaunch({
+          date_utc: 'No upcoming launches.',
+          rocket: '',
+          name: '',
+          flight_number: ': TBA'
+        });
+      }
     });
   }, []);
 
@@ -47,7 +57,7 @@ const App = () => {
       <Content>
         {launch.date_utc ? (
           <>
-            <CountdownTimer date={launch.date_utc} />
+            {launch.rocket !== '' && <CountdownTimer date={launch.date_utc} />}
             <View>
               <Rocket id={launch.rocket} />
               {/* TODO: transition launch details on about click */}
