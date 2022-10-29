@@ -6,12 +6,12 @@ import starShip from '../assets/starship.png';
 
 const Rocket = ({ id }) => {
   switch (id) {
-    case '5e9d0d95eda69973a809d1ec':
-      return <RocketImage src={falcon9} className="rocket" alt="rocket" />;
+    case '5e9d0d96eda699382d09d1ee':
+      return <RocketImage src={starShip} className="rocket" alt="rocket" />;
     case '5e9d0d95eda69974db09d1ed':
       return <RocketImage src={falconHeavy} className="rocket" alt="rocket" />;
     default:
-      return <RocketImage src={starShip} className="rocket" alt="rocket" />;
+      return <RocketImage src={falcon9} className="rocket" alt="rocket" />;
   }
 };
 

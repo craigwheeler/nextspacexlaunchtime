@@ -29,10 +29,10 @@ const query = gql`
 
 const App = () => {
   const [launch, setLaunch] = useState({
-    rocket: '',
-    date_utc: '',
-    name: '',
-    flight_number: ''
+    rocket: null,
+    date_utc: null,
+    name: null,
+    flight_number: null
   });
 
   useEffect(() => {
@@ -42,7 +42,7 @@ const App = () => {
         setLaunch(launch);
       } else {
         setLaunch({
-          date_utc: 'No upcoming launches.',
+          date_utc: '',
           rocket: '',
           name: '',
           flight_number: ': TBA'
@@ -55,12 +55,11 @@ const App = () => {
     <LayoutContainer>
       <Header />
       <Content>
-        {launch.date_utc ? (
+        {launch.flight_number ? (
           <>
-            {launch.rocket !== '' && <CountdownTimer date={launch.date_utc} />}
+            {launch.rocket !== '' ? <CountdownTimer date={launch.date_utc} /> : 'No upcoming launches'}
             <View>
               <Rocket id={launch.rocket} />
-              {/* TODO: transition launch details on about click */}
               {/* <LaunchInfo launch={launch} /> */}
             </View>
             <MissionInfo>
