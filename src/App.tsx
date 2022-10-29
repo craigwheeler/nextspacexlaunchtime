@@ -29,10 +29,10 @@ const query = gql`
 
 const App = () => {
   const [launch, setLaunch] = useState({
-    rocket: null,
-    date_utc: null,
-    name: null,
-    flight_number: null
+    rocket: '',
+    date_utc: '',
+    name: '',
+    flight_number: ''
   });
 
   useEffect(() => {
